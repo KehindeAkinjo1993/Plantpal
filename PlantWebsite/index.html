@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantPal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" 
+rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" 
+rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" 
+rel="stylesheet">
+    <style>
+       @media (max-width: 768px) {
+          .container {
+          flex-direction: column;
+           gap: 2rem;
+           }
+        }
+
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+        }
+
+        body , html{
+            background-color: white;
+        }
+
+        .Herosection{
+            display: flex;
+            flex-direction: column;
+            background-color: #CEE5CA;
+            margin-top: 0;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+
+        .Herosection > h1{
+            font-family: Dancing Script;
+            color: #395137;
+            font-weight: bolder;
+            
+        }
+
+        #Bar > ul{
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            bottom: 30px;
+            padding-top: 30px;
+            
+        }
+
+        #Bar > ul > li{
+            list-style: none;
+        }
+
+        #Bar > ul > li > a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .Herosection h2{
+            color: #415a3f;
+            text-align: center;
+            font-family: nunito;
+            padding-bottom: 10px;
+        }
+
+        .Herosection p{
+            text-align: center;
+            font-family: Quicksand;
+            padding-bottom: 10px;
+        }
+        
+        .Herosection button{
+            background-color: #537351;
+            text-align: center;
+            padding: 10px 25px;
+            border-radius: 10px;
+            color: #ecf5eb;
+            font-family: Quicksand;
+        }
+
+        .Herosection button:hover {
+        background-color: #395137;
+        color: white;
+        transition: 0.3s ease;
+        cursor: pointer;
+       }
+
+        .PlantGuide{
+            background-color: #ecf5eb;
+            font-family: Quicksand;
+            margin-top: 0;
+            padding-top: 2rem;
+        }
+
+        .PlantGuide h2{
+            color: #415a3f;
+            position: relative;
+            left: 30px;
+            top: 20px;
+            font-family: nunito;
+            margin-top: 0;
+            padding-bottom: 2rem;
+        }
+
+        .PlantGuide > .plants > #snakeplant > h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .PlantGuide > .plants > #snakeplant > p{
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
+
+        .PlantGuide > .plants > #monstera > h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .PlantGuide > .plants > #monstera > p{
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
+
+         .PlantGuide > .plants > #spiderplant > h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .PlantGuide > .plants > #spiderplant > p{
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
+
+        .PlantGuide > .plants > #RubberPlant > h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .PlantGuide > .plants > #RubberPlant > p{
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
+
+        .plants {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+    
+        .plants img{
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        .plants > div {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+         }
+
+        .container{
+            display: flex;
+            gap: 50%;
+        }
+
+        .tips{
+            flex-wrap: wrap;
+            position: relative;
+            left: 50px;
+            margin-bottom: 10px;
+            font-family: Quicksand;
+        }
+
+        #AO{
+            background-color: white;
+            display: flex;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        #PL{
+            background-color: white;
+            display: flex;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        #PL img{
+            width: 30px;
+        }
+
+        #AO img{
+            width: 30px;
+        }
+
+        #CR{
+            background-color: white;
+            display: flex;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        #CR img{
+            width: 30px;
+        }
+
+        input, textarea{
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            border: solid 1px aliceblue;
+            margin-top: 20px;
+            box-shadow: 50px;
+        }
+
+        .plants >div:hover{
+            transform: scale(1.50);
+            transition: transform 0.3s ease;
+        }
+
+        .form{
+            text-align: center;
+        }
+
+        .form button{
+            background-color: #537351;
+            text-align: center;
+            padding: 10px 25px;
+            color: #ecf5eb;
+            border-radius: 10px;
+            width: 100%;
+            font-family: Quicksand;
+        }
+
+        .form button:hover{
+            background-color: #395137;
+            color: white;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        footer{
+            text-align: center;
+            font-family: Quicksand;
+        }
+    </style>
+</head>
+<body>
+    <header class="Herosection">
+        <h1>PlantPal</h1>
+        <nav id="Bar">
+            <ul>
+                <li><a href="Home">Home</a></li>
+                <li><a href="Plant Guide">Plant Guide</a></li>
+                <li><a href="Care">Care</a></li>
+                <li><a href="Care Tips">Care Tips</a></li>
+                <li><a href="Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h2>Welcome to PlantPal</h2>
+        <p>Your guide to happy, healthy houseplants</p>
+        <button>Explore Plants</button>
+    </header>
+
+    <section class="PlantGuide">
+        <h2>Plant Guide</h2>
+        <div class="plants">
+            <div id="snakeplant">
+                <img src="./Assets/SnakePlant.jpg">
+                <h3>Snake Plant</h3>
+                <p>Light: Warm</p>
+                <p>Water: 1 mist</p>
+            </div>
+            <div id="monstera">
+                <img src="./Assets/monstera.jpg">
+                <h3>Monstera</h3>
+                <p>Light: Moderate</p>
+                <p>Water: Light</p>
+            </div>
+            <div id="spiderplant">
+                <img src="./Assets/spiderplant.jpg">
+                <h3>Spider Plant</h3>
+                <p>Light: Medium</p>
+                <p>Water: 1 mist</p>
+            </div>
+            <div id="RubberPlant">
+                <img src="./Assets/rubberplant.jpg">
+                <h3>Rubber Plant</h3>
+                <p>Light: Indirect <br/> ordor</p>
+            </div>
+        </div>
+
+        <div class="container">
+         <div class="tips">  
+        <h2>Care Tips</h2>
+        <div id="listtips">
+           <div id="AO"><img src="./Assets/overwatering.jpg"> <p>Avoid Overwatering</p></div> 
+            <div id="PL"><img src="./Assets/sunlight.jpg"><p>Provide indirect light</p></div>
+            <div id="CR"><img src="./Assets/pest.jpg"><p>Check for pests regularly</p></div>
+        </div>
+        </div> 
+    
+
+    <div class="form">
+        <h2>Ask a Plant Question</h2>
+        <form>
+            <label for="name"></label>
+            <input id="name" type="name" placeholder="Name">
+            <br/>
+
+            <label for="email"></label>
+            <input id="email" type="email" placeholder="Email">
+            <br/>
+
+            <label for="message"></label>
+            <textarea id="message" placeholder="Message" rows="4" cols="15"></textarea>
+            <br/>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+     </div>
+   
+    </section>
+
+    
+
+    <footer>2025 PlantPal | Happy Growing!</footer>
+    
+</body>
+</html>
